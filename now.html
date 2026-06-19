@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="What Shiloh Oni is currently building, reading, and thinking about — updated monthly." />
+  <title>Now — Shiloh Oni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__brand">
+      <img src="assets/shiloh-portrait.jpg" alt="" class="nav__avatar" />
+      <span class="nav__name">Shiloh Oni</span>
+    </a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__list" id="navList">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="now.html" aria-current="page">Now</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="assets/ShilohOni_CV.pdf" class="nav__cv" target="_blank" rel="noopener">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header class="page-header">
+    <div class="container container--narrow">
+      <div class="page-header__meta">
+        <span>Updated June 2026</span>
+      </div>
+      <h1 class="page-header__title">Now</h1>
+      <div class="page-header__sub">
+        <span>Nigeria</span><span aria-hidden="true">·</span>
+        <span>June 2026</span><span aria-hidden="true">·</span>
+        <a href="https://nownownow.com/about" target="_blank" rel="noopener">A /now page</a>
+      </div>
+      <p class="page-header__lede">
+        What I'm focused on right now — building, reading, and thinking about. Updated monthly so it stays honest.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ BUILDING ============ -->
+  <section class="now-section">
+    <div class="container container--narrow">
+      <h2 class="now-section__title">Building</h2>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>AfriVTON-Bench — preparing for WiML @ ICML 2026</h3>
+          <span class="now-item__badge now-item__badge--active">Active · Oral in Seoul</span>
+        </div>
+        <p>
+          The paper was accepted for oral presentation at the Women in Machine Learning Workshop at ICML 2026 in Seoul. Right now I'm finalizing the talk, polishing the failure-mode visualizations, and tightening the evaluation protocol around <em>tonal drift</em> — the perceptual skin-tone shift metric we introduced. The hardest open question: whether the failure modes we surfaced (pattern dissolution, drape collapse, tonal drift) generalize beyond African textile patterns to other underrepresented garment distributions.
+        </p>
+        <div class="tags">
+          <span class="tag">Virtual Try-On</span>
+          <span class="tag">Cultural Robustness</span>
+          <span class="tag">WiML @ ICML 2026</span>
+        </div>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Multimodal Deepfake Defence — ML Collective</h3>
+          <span class="now-item__badge">Ongoing · Research</span>
+        </div>
+        <p>
+          Contributing to a multimodal detection pipeline that combines facial and voice cues to flag deepfaked and spoofed media in low-resource African contexts. Currently working on dataset curation across compression regimes and benchmarking baseline detectors under adversarial perturbation. Weekly syncs with a global volunteer team across more than ten countries.
+        </p>
+        <div class="tags">
+          <span class="tag">Multimodal</span>
+          <span class="tag">Anti-Spoofing</span>
+          <span class="tag">ML Collective</span>
+        </div>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>NYSC Veterinary Service — Warri</h3>
+          <span class="now-item__badge">Clinical · Closing Out</span>
+        </div>
+        <p>
+          Wrapping up my NYSC year at the Government Veterinary Clinic in Warri — primary clinical care for small animals and livestock, zoonotic surveillance, biosecurity counselling. The clinical caseload has become a quiet feedback loop for how I think about model robustness: real diagnoses degrade gracefully under partial information, the way deployed ML should.
+        </p>
+        <div class="tags">
+          <span class="tag">Veterinary Medicine</span>
+          <span class="tag">Zoonotic Surveillance</span>
+          <span class="tag">NYSC</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ READING ============ -->
+  <section class="now-section now-section--alt">
+    <div class="container container--narrow">
+      <h2 class="now-section__title">Reading</h2>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Speech and Language Processing</h3>
+          <span class="now-item__sub">Jurafsky &amp; Martin — Stanford</span>
+        </div>
+        <p>
+          Working through the 3rd edition draft chapters on retrieval and machine translation as background for the next phase of multilingual NLP work. The chapters on subword tokenization for morphologically rich languages have been particularly useful for thinking about why BGE-M3 needed the fine-tuning it did for our Nigerian-language work.
+        </p>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Deep Learning for Computer Vision</h3>
+          <span class="now-item__sub">Recent VTON &amp; diffusion papers</span>
+        </div>
+        <p>
+          Tracking the post-LEFFA wave of virtual try-on architectures and the broader diffusion-model literature on garment-aware conditioning. Reading these against the failure modes AfriVTON-Bench surfaced — looking for whether newer methods address the underlying distribution-shift problem or paper over it with capacity.
+        </p>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>The Mom Test</h3>
+          <span class="now-item__sub">Rob Fitzpatrick</span>
+        </div>
+        <p>
+          A re-read before community user-research sessions and reviewer-feedback cycles. The book is about extracting real signal from conversations instead of polite affirmation — relevant whether the conversation is with a patient, a farmer, a paper reviewer, or an interviewee.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ THINKING ABOUT ============ -->
+  <section class="now-section">
+    <div class="container container--narrow">
+      <h2 class="now-section__title">Thinking About</h2>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Cultural robustness as a first-class property of vision models</h3>
+        </div>
+        <p>
+          AfriVTON-Bench was partly an attempt to make cultural robustness <em>measurable</em> rather than a vague aspiration. But "robustness to African textile patterns" is still one slice. What does a general framework look like — one that pins down measurable failures across high-frequency print structure, non-Western drape, skin-tone range, and culturally-specific garment grammar? And what training-data interventions actually move the needle versus dressing up the same distribution in new architecture?
+        </p>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Multilingual NLP beyond translation parity</h3>
+        </div>
+        <p>
+          Most "Nigerian language NLP" benchmarks evaluate translation or basic classification. But the retrieval gap matters more for end-use: people search for information, not translation. The BGE-M3 work nudged this, but the harder problem is building evaluation datasets that reflect how Nigerians actually query — code-mixed, register-shifting, domain-specific. Wondering what the right evaluation protocol looks like.
+        </p>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>Clinical ML that survives deployment</h3>
+        </div>
+        <p>
+          A year of clinical practice has changed how I read papers. Models that report 95% on a curated benchmark often won't survive the first week in a real clinic — labels are noisy, imaging modalities shift, distribution shifts are constant. The few-shot blood smear work was a small attempt at this. The bigger question: what does the deployed-clinical-AI evaluation stack look like, separate from the publication-grade evaluation stack?
+        </p>
+      </article>
+
+      <article class="now-item">
+        <div class="now-item__head">
+          <h3>The path question — engineering, research, or clinic</h3>
+        </div>
+        <p>
+          I currently work across applied ML research, production-adjacent engineering, and clinical veterinary medicine. The three sharpen each other in unexpected ways — but each demands different long-term commitments. PhD route, applied research lab, or veterinary-AI specialization? Sitting with the question rather than rushing the answer.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <a href="index.html">Shiloh Oni</a> · Nigeria · 2026 · <a href="https://nownownow.com/about" target="_blank" rel="noopener">What is a /now page?</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
