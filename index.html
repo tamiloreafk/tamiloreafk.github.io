@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shiloh Oni, Applied ML Researcher and Veterinary Doctor. Working on multilingual NLP, medical imaging, and cultural robustness in vision models. Based in Nigeria." />
+  <meta property="og:title" content="Shiloh Oni, ML Researcher &amp; Veterinary Doctor" />
+  <meta property="og:description" content="Applied ML Researcher working at the intersection of language, vision, and healthcare. Co-author of AfriVTON-Bench. Based in Nigeria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/shiloh-portrait.jpg" />
+  <title>Shiloh Oni, ML Researcher &amp; Veterinary Doctor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__brand">
+      <img src="assets/shiloh-portrait.jpg" alt="" class="nav__avatar" />
+      <span class="nav__name">Shiloh Oni</span>
+    </a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__list" id="navList">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="now.html">Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/ShilohOni_CV.pdf" class="nav__cv" target="_blank" rel="noopener">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__status">
+        <span class="hero__dot"></span> Open to opportunities
+      </div>
+
+      <h1 class="hero__name"><span class="hero__name-text">Shiloh Oni</span></h1>
+
+      <div class="hero__role">
+        <span class="hero__role-text" id="roleType">ML Researcher</span><span class="hero__role-caret">|</span>
+      </div>
+
+      <p class="hero__lede">
+        Applied <strong>Machine Learning Researcher</strong> and <strong>Veterinary Doctor</strong> working at the intersection of language, vision, and healthcare. I build multilingual NLP systems for African languages and benchmark cultural robustness in generative vision models.
+      </p>
+
+      <p class="hero__now">
+        Now → Co-leading <a href="#research">AfriVTON-Bench</a>, a benchmark evaluating virtual try-on models on African textile patterns. Accepted for oral presentation at WiML @ ICML 2026.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="assets/ShilohOni_CV.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Download CV</a>
+      </div>
+
+      <ul class="hero__socials" aria-label="Social links">
+        <li><a href="https://github.com/tamiloreafk" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.5C20.2 21.4 23.5 17.1 23.5 12 23.5 5.7 18.3.5 12 .5z"/></svg>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/adebisi-oni-2a6aa83b8" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.3a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5S13 13 13 14.2V19h-3v-9h2.9v1.2h.04A3.2 3.2 0 0115.7 9.8c3 0 3.6 2 3.6 4.6V19z"/></svg>
+        </a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=tHkXRuoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 2zm6.82 7L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        </a></li>
+        <li><a href="mailto:shilohadebisi@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="hero__portrait-wrap">
+      <div class="hero__portrait">
+        <img src="assets/shiloh-portrait.jpg" alt="Shiloh Oni in teal veterinary scrubs with stethoscope, studio portrait." />
+      </div>
+
+      <div class="hero__float hero__float--tl">
+        <span class="hero__float-num">4<span class="hero__float-plus">+</span></span>
+        <span class="hero__float-lbl">Years Exp.</span>
+      </div>
+      <div class="hero__float hero__float--tr">
+        <span class="hero__float-num">2</span>
+        <span class="hero__float-lbl">Papers</span>
+      </div>
+      <div class="hero__float hero__float--br">
+        <span class="hero__float-num">2<span class="hero__float-plus">×</span></span>
+        <span class="hero__float-lbl">DLI Poster</span>
+      </div>
+      <div class="hero__float hero__float--bl">
+        <span class="hero__float-num">DVM</span>
+        <span class="hero__float-lbl">FUNAAB · 2024</span>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>ML Researcher</span><span>·</span>
+        <span>Multilingual NLP</span><span>·</span>
+        <span>Computer Vision</span><span>·</span>
+        <span>Medical Imaging</span><span>·</span>
+        <span>Speech &amp; Audio</span><span>·</span>
+        <span>Information Retrieval</span><span>·</span>
+        <span>Veterinary Doctor</span><span>·</span>
+        <span>ML Collective</span><span>·</span>
+        <span>WiML @ ICML 2026</span><span>·</span>
+        <span>FUNAAB</span><span>·</span>
+        <span>Open to Opportunities</span><span>·</span>
+        <span>ML Researcher</span><span>·</span>
+        <span>Multilingual NLP</span><span>·</span>
+        <span>Computer Vision</span><span>·</span>
+        <span>Medical Imaging</span><span>·</span>
+        <span>Speech &amp; Audio</span><span>·</span>
+        <span>Information Retrieval</span><span>·</span>
+        <span>Veterinary Doctor</span><span>·</span>
+        <span>ML Collective</span><span>·</span>
+        <span>WiML @ ICML 2026</span><span>·</span>
+        <span>FUNAAB</span><span>·</span>
+        <span>Open to Opportunities</span><span>·</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">01 /About Me</span>
+      </div>
+
+      <div class="about">
+        <figure class="about__portrait">
+          <img src="assets/shiloh-portrait.jpg" alt="Shiloh Oni portrait" />
+        </figure>
+        <div class="about__body">
+          <h2 class="section__title">Research at the Intersection of Language, Vision, and Healthcare</h2>
+
+          <p>
+            I'm an applied machine learning researcher and a licensed veterinary doctor. My research sits where multilingual NLP, computer vision, and AI for healthcare meet, especially when those tools have to work for communities and contexts that mainstream models weren't trained for.
+          </p>
+
+          <p>
+            With <strong>ML Collective</strong>, I co-lead <strong>AfriVTON-Bench</strong>, a benchmark exposing how virtual try-on models trained on Western fashion corpora fail on African textile patterns and garment structures. The paper was accepted for oral presentation at the <strong>Women in Machine Learning (WiML) Workshop at ICML 2026</strong>. I also led the BGE-M3 multilingual embedding work for Nigerian low-resource languages, published at the 9th Widening NLP Workshop and awarded <strong>Best Poster at Deep Learning Indaba 2025</strong>.
+          </p>
+
+          <p>
+            Clinically, I serve as a Veterinary Doctor under the Nigerian NYSC scheme, handling diagnosis, surgery, vaccination, and zoonotic disease surveillance for small animals and livestock. The cross-discipline grounds the research: I think about model robustness, dataset gaps, and deployment constraints with the same caution I bring to a clinical case.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__num">4<span class="stat__plus">+</span></span>
+          <span class="stat__label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">6</span>
+          <span class="stat__label">Roles &amp; Internships</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2</span>
+          <span class="stat__label">Peer-Reviewed Papers</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">5</span>
+          <span class="stat__label">Awards &amp; Honors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">02 /Work History</span>
+      </div>
+      <h2 class="section__title">Experience</h2>
+      <p class="section__lede">Four years across applied ML research, data science, and clinical practice, building systems, shipping models, and publishing peer-reviewed work.</p>
+
+      <ol class="timeline">
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Government Veterinary Clinic, Warri</h3>
+            <span class="role__title">Veterinary Doctor (NYSC)</span>
+          </header>
+          <div class="role__meta">
+            <span>Jun 2025 – May 2026</span><span aria-hidden="true">·</span><span>Warri, Nigeria</span>
+          </div>
+          <p>
+            Delivered primary clinical care across small animals and livestock, diagnosis, surgical procedures, vaccination, and post-operative monitoring under the state veterinary service. Supported disease surveillance and public-health reporting on zoonotic conditions, contributing to outbreak response notes. Counselled farmers and pet owners on preventive care, nutrition, and biosecurity.
+          </p>
+          <div class="tags">
+            <span class="tag">Clinical Diagnosis</span>
+            <span class="tag">Surgery</span>
+            <span class="tag">Zoonotic Surveillance</span>
+            <span class="tag">Biosecurity</span>
+          </div>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">ML Collective</h3>
+            <span class="role__title">Independent Researcher</span>
+          </header>
+          <div class="role__meta">
+            <span>Sep 2023 – Present</span><span aria-hidden="true">·</span><span>Remote</span>
+          </div>
+          <p>
+            Lead and contribute to applied ML research projects spanning multilingual information retrieval, few-shot medical imaging, and multimodal deepfake defence. Two co-authored works awarded Best Poster at Deep Learning Indaba 2025, Kigali. Active in weekly MLC reading sessions reviewing cutting-edge papers and supporting members with essay reviews and conference preparation.
+          </p>
+          <div class="tags">
+            <span class="tag">Multilingual NLP</span>
+            <span class="tag">Few-Shot Learning</span>
+            <span class="tag">Medical Imaging</span>
+            <span class="tag">Research</span>
+          </div>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">SeqHub Analytics</h3>
+            <span class="role__title">Data Science Intern</span>
+          </header>
+          <div class="role__meta">
+            <span>Jun 2024 – Dec 2024</span><span aria-hidden="true">·</span><span>Remote</span>
+          </div>
+          <p>
+            Built an AI-powered chatbot for sickle cell patients using LLMs and RAG, improving response accuracy by 70%. Analysed user interaction data to enhance personalization and optimize medical information delivery for an underserved patient community.
+          </p>
+          <div class="tags">
+            <span class="tag">LLMs</span>
+            <span class="tag">RAG</span>
+            <span class="tag">AI for Healthcare</span>
+            <span class="tag">Python</span>
+          </div>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Future Academy Africa</h3>
+            <span class="role__title">ML Engineer, Intern</span>
+          </header>
+          <div class="role__meta">
+            <span>Sep 2023 – Sep 2024</span><span aria-hidden="true">·</span><span>Remote</span>
+          </div>
+          <p>
+            Implemented TensorFlow and OpenCV models for real-time queue prediction and optimization. Built a Chrome extension that automated company data extraction for internal data teams, removing a recurring manual step from their workflow.
+          </p>
+          <div class="tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Chrome Extension</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">MopCare</h3>
+            <span class="role__title">Data Analyst</span>
+          </header>
+          <div class="role__meta">
+            <span>Sep 2022 – Aug 2023</span><span aria-hidden="true">·</span><span>Remote</span>
+          </div>
+          <p>
+            Developed data-driven tools for caregiver–client matching, increasing satisfaction and service quality by 25%. Automated validation systems that reduced caregiver mismatch rates by 20%.
+          </p>
+          <div class="tags">
+            <span class="tag">Recommender Systems</span>
+            <span class="tag">Data Validation</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+          </div>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Techtrend Africa</h3>
+            <span class="role__title">Data Analyst</span>
+          </header>
+          <div class="role__meta">
+            <span>May 2022 – Aug 2022</span><span aria-hidden="true">·</span><span>Remote</span>
+          </div>
+          <p>
+            Designed and deployed a scalable Python-based recommender system using Scikit-learn and collaborative filtering, boosting recommendation accuracy by 15% and user engagement by 20%. Built an ARIMA time-series forecasting model that improved demand planning accuracy by 25% and cut inventory costs by 12%.
+          </p>
+          <div class="tags">
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Collaborative Filtering</span>
+            <span class="tag">ARIMA</span>
+            <span class="tag">Forecasting</span>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03 /Selected Work</span>
+      </div>
+      <h2 class="section__title">Projects</h2>
+      <p class="section__lede">Research benchmarks and applied systems spanning multilingual NLP, computer vision, medical imaging, and multimodal deepfake defence.</p>
+
+      <div class="projects">
+
+        <article class="project">
+          <header class="project__head">
+            <span class="project__badge">Accepted · WiML @ ICML 2026</span>
+            <h3 class="project__title">AfriVTON-Bench</h3>
+          </header>
+          <p>
+            A benchmark of 111 African garment images across 16 categories and 7 countries, 1,012 person–garment pairs, evaluating FASHN-VTON and LEFFA on high-frequency wax-print patterns and non-Western draping silhouettes. Introduces <em>tonal drift</em> as a new perceptual metric for skin-tone shift between input and output. Co-led with Testimony Adekoya.
+          </p>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">HF Diffusers</span>
+            <span class="tag">gLPIPS / gSSIM / DISTS</span>
+            <span class="tag">WiML @ ICML 2026</span>
+          </div>
+          <div class="project__links">
+            <a href="projects/afrivton.html">Case Study →</a>
+            <a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project__head">
+            <span class="project__badge">Published · WiNLP 2025</span>
+            <h3 class="project__title">BGE-M3 for Nigerian Low-Resource Languages</h3>
+          </header>
+          <p>
+            Fine-tuned BGE-M3 dense embeddings on three Nigerian languages for information retrieval over local document corpora, closing the multilingual coverage gap in standard retrieval encoders. Achieved a 20% improvement in Mean Reciprocal Rank (MRR) over baseline. Published in Proceedings of the 9th Widening NLP Workshop, Suzhou.
+          </p>
+          <div class="tags">
+            <span class="tag">BGE-M3</span>
+            <span class="tag">Multilingual NLP</span>
+            <span class="tag">Dense Retrieval</span>
+            <span class="tag">Best Poster, DLI 2025</span>
+          </div>
+          <div class="project__links">
+            <a href="projects/bge-m3.html">Case Study →</a>
+            <a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project__head">
+            <span class="project__badge">Best Poster, DLI 2025</span>
+            <h3 class="project__title">Few-Shot Multi-Disease Blood Smear Diagnosis</h3>
+          </header>
+          <p>
+            A few-shot classifier for sickle cell anemia, malaria, leukemia, and trypanosomiasis from limited blood smear images, targeting diagnostic settings where labelled data is scarce. Deployed for real-time inference on unseen samples with class-level prediction output.
+          </p>
+          <div class="tags">
+            <span class="tag">Few-Shot Learning</span>
+            <span class="tag">Medical Imaging</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Clinical AI</span>
+          </div>
+          <div class="project__links">
+            <a href="projects/blood-smear.html">Case Study →</a>
+            <a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project__head">
+            <span class="project__badge">Active · ML Collective</span>
+            <h3 class="project__title">Multimodal Deepfake Defence &amp; Anti-Spoofing</h3>
+          </header>
+          <p>
+            A multimodal detection pipeline combining visual (face) and audio (voice) cues to flag deepfaked and spoofed media in low-resource African contexts. Working on dataset curation, baseline detector benchmarking, and cross-modal fusion under compression and adversarial perturbation.
+          </p>
+          <div class="tags">
+            <span class="tag">Multimodal</span>
+            <span class="tag">Anti-Spoofing</span>
+            <span class="tag">Audio + Vision</span>
+            <span class="tag">Adversarial ML</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project__head">
+            <span class="project__badge">Industry · SeqHub</span>
+            <h3 class="project__title">Sickle Cell Patient Chatbot</h3>
+          </header>
+          <p>
+            LLM- and RAG-powered chatbot built for sickle cell patients during my time at SeqHub Analytics, improved response accuracy by 70% and personalized medical information delivery based on user interaction signals.
+          </p>
+          <div class="tags">
+            <span class="tag">LLMs</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Healthcare</span>
+            <span class="tag">Personalization</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">04 /Publications</span>
+      </div>
+      <h2 class="section__title">Research</h2>
+      <p class="section__lede">Peer-reviewed work on cultural robustness in generative vision models and multilingual retrieval for African languages.</p>
+
+      <div class="papers">
+
+        <article class="paper">
+          <div class="paper__venue">Accepted · Oral · WiML Workshop @ ICML 2026</div>
+          <h3 class="paper__title">AfriVTON-Bench: Evaluating the Robustness of Virtual Try-On Models to African Textile Patterns and Garment Structures</h3>
+          <div class="paper__authors">Adekoya, T. O. &amp; <strong>Oni, S. A.</strong> · 2026 · Seoul, South Korea</div>
+          <p class="paper__abstract">
+            Benchmark exposing distribution-shift failures in VTON systems trained on Western fashion corpora. 111 African garment images across 16 categories, 7 countries, 5 sub-regions, paired with 15 diverse person model images for 1,012 evaluation pairs. Audited VITON-HD and DressCode for representation gaps. Surfaces three systematic failure modes, pattern dissolution, drape collapse, and tonal drift, across FASHN-VTON and LEFFA, pointing to the shared training distribution as root cause.
+          </p>
+          <div class="tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Generative Models</span>
+            <span class="tag">Cultural Bias</span>
+            <span class="tag">Benchmarking</span>
+          </div>
+        </article>
+
+        <article class="paper">
+          <div class="paper__venue">Published · 9th Widening NLP Workshop, Suzhou · ACL 2025</div>
+          <h3 class="paper__title">Improving BGE-M3 Multilingual Dense Embeddings for Nigerian Low-Resource Languages</h3>
+          <div class="paper__authors">Omotoso, A., Shopeju, H., Joshua, A., &amp; <strong>Oni, S.</strong> · 2025 · pp. 224–229</div>
+          <p class="paper__abstract">
+            Fine-tuned BGE-M3 dense embedding model on three Nigerian low-resource languages for information retrieval over local document corpora, closing the multilingual coverage gap in standard retrieval encoders. Achieved a 20% improvement in Mean Reciprocal Rank (MRR) over the baseline across the three target languages.
+          </p>
+          <div class="tags">
+            <span class="tag">Multilingual NLP</span>
+            <span class="tag">Dense Retrieval</span>
+            <span class="tag">Low-Resource Languages</span>
+            <span class="tag">Best Poster, DLI 2025</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">05 /Technical Skills</span>
+      </div>
+      <h2 class="section__title">Stack</h2>
+      <p class="section__lede">Tools I reach for when building applied ML systems, running research experiments, and shipping production code.</p>
+
+      <div class="skills">
+
+        <div class="skill-group">
+          <h4>Programming &amp; Tools</h4>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Bash</span><span class="tag">Git</span><span class="tag">LaTeX</span><span class="tag">Jupyter</span><span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>ML &amp; Deep Learning</h4>
+          <div class="tags">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span><span class="tag">HF Transformers</span><span class="tag">HF Diffusers</span><span class="tag">PEFT / LoRA</span><span class="tag">Few-shot Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Natural Language Processing</h4>
+          <div class="tags">
+            <span class="tag">Multilingual NLP</span><span class="tag">Dense Retrieval</span><span class="tag">Sparse Retrieval</span><span class="tag">RAG</span><span class="tag">BGE-M3</span><span class="tag">Sentence-Transformers</span><span class="tag">MRR / nDCG</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Computer Vision &amp; Medical Imaging</h4>
+          <div class="tags">
+            <span class="tag">OpenCV</span><span class="tag">Image Classification</span><span class="tag">Segmentation</span><span class="tag">VTON Benchmarking</span><span class="tag">LPIPS / SSIM / DISTS</span><span class="tag">Blood Smear Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Speech &amp; Audio</h4>
+          <div class="tags">
+            <span class="tag">Speech Transformers</span><span class="tag">Audio Feature Extraction</span><span class="tag">Anti-Spoofing</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Information Retrieval &amp; Vector Search</h4>
+          <div class="tags">
+            <span class="tag">FAISS</span><span class="tag">ChromaDB</span><span class="tag">Hybrid Retrieval</span><span class="tag">Reranking</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Data Analysis &amp; Visualization</h4>
+          <div class="tags">
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Statistical Analysis</span><span class="tag">ARIMA</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Veterinary &amp; Clinical</h4>
+          <div class="tags">
+            <span class="tag">Clinical Diagnosis</span><span class="tag">Small-Animal Medicine</span><span class="tag">Livestock Medicine</span><span class="tag">Surgery</span><span class="tag">Disease Surveillance</span><span class="tag">Biosecurity</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFICIENCY ============ -->
+  <section id="proficiency" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">06 /Proficiency</span>
+      </div>
+      <h2 class="section__title">Proficiency by Domain</h2>
+      <p class="section__lede">A self-assessment of competence across the six domains my work most often touches, calibrated against where I'd want to be at my next research milestone.</p>
+
+      <div class="proficiency">
+        <div class="proficiency__radar" id="profRadar" aria-label="Radar chart of skill proficiencies">
+          <!-- Rendered by script.js -->
+        </div>
+
+        <div class="proficiency__bars">
+          <div class="prof-bar" style="--score: 85">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Multilingual NLP</span>
+              <span class="prof-bar__score">85<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+          <div class="prof-bar" style="--score: 82">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Computer Vision</span>
+              <span class="prof-bar__score">82<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+          <div class="prof-bar" style="--score: 80">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Few-Shot Learning</span>
+              <span class="prof-bar__score">80<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+          <div class="prof-bar" style="--score: 75">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Medical Imaging</span>
+              <span class="prof-bar__score">75<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+          <div class="prof-bar" style="--score: 84">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Information Retrieval</span>
+              <span class="prof-bar__score">84<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+          <div class="prof-bar" style="--score: 88">
+            <div class="prof-bar__head">
+              <span class="prof-bar__label">Research Methodology</span>
+              <span class="prof-bar__score">88<span class="prof-bar__total">/100</span></span>
+            </div>
+            <div class="prof-bar__track"><div class="prof-bar__fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITY ============ -->
+  <section id="community" class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">07 /Community</span>
+      </div>
+      <h2 class="section__title">Conferences &amp; Teaching</h2>
+      <p class="section__lede">Active contributor to the African AI ecosystem through research presentations, teaching, and community-building.</p>
+
+      <ol class="timeline timeline--community">
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">WiML Workshop @ ICML 2026</h3>
+            <span class="role__title">Oral Presenter</span>
+          </header>
+          <div class="role__meta"><span>2026</span><span aria-hidden="true">·</span><span>Seoul, South Korea</span></div>
+          <p>Oral presentation of <em>AfriVTON-Bench: Evaluating the Robustness of Virtual Try-On Models to African Textile Patterns and Garment Structures</em> (with Testimony Adekoya).</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">African Computer Vision Summer School (ACVSS) 2026</h3>
+            <span class="role__title">Presenter &amp; Attendee</span>
+          </header>
+          <div class="role__meta"><span>Jul 2026</span><span aria-hidden="true">·</span><span>Accra, Ghana</span></div>
+          <p>Presenting research on robustness of virtual try-on models to African textile patterns and garment structures; engaging in technical sessions on computer vision research across the African continent.</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Deep Learning Indaba 2025</h3>
+            <span class="role__title">Poster Presenter · 2× Best Poster Award</span>
+          </header>
+          <div class="role__meta"><span>Aug 2025</span><span aria-hidden="true">·</span><span>Kigali, Rwanda</span></div>
+          <p>Presented two posters: <em>Improving BGE-M3 Multilingual Dense Embeddings for Nigerian Low-Resource Languages</em> and <em>Learning From Less: Few-Shot Learning for Multi-Disease Blood Smear Diagnosis</em>.</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Data Science Africa (DSA) 2025</h3>
+            <span class="role__title">Attendee</span>
+          </header>
+          <div class="role__meta"><span>Jun 2025</span><span aria-hidden="true">·</span><span>University of Ibadan, Nigeria</span></div>
+          <p>Engaged in sessions on applied AI research and community-driven data science in Africa.</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">PyCon Africa</h3>
+            <span class="role__title">Attendee</span>
+          </header>
+          <div class="role__meta"><span>Sep 2024</span><span aria-hidden="true">·</span><span>Accra, Ghana</span></div>
+          <p>Sessions on open-source software, AI ethics, and Python community development.</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">Deep Learning Indaba 2023</h3>
+            <span class="role__title">Volunteer &amp; Attendee</span>
+          </header>
+          <div class="role__meta"><span>Sep 2023</span><span aria-hidden="true">·</span><span>Accra, Ghana</span></div>
+          <p>Attended talks, workshops, and networking sessions; supported event registration as a volunteer.</p>
+        </li>
+
+        <li class="role">
+          <header class="role__head">
+            <h3 class="role__co">SheCode Africa &amp; AI Invasion FUNAAB</h3>
+            <span class="role__title">Data Science Tutor</span>
+          </header>
+          <div class="role__meta"><span>2022</span><span aria-hidden="true">·</span><span>Abeokuta, Nigeria</span></div>
+          <p>Mentored women across Africa entering tech careers and tutored 15 students on data science fundamentals, NumPy, pandas, and exploratory data analysis.</p>
+        </li>
+
+      </ol>
+
+      <div class="awards">
+        <h3 class="awards__title">Awards &amp; Honors</h3>
+        <ul class="awards__list">
+          <li><strong>Best Poster Awards (×2)</strong>, Deep Learning Indaba 2025, Kigali</li>
+          <li><strong>Women Techsters Fellowship</strong>, 2025</li>
+          <li><strong>AWS AI &amp; ML Scholarship</strong>, Udacity AI Programming with Python Nanodegree</li>
+          <li><strong>Certificate of Best Reviewer</strong>, Deep Learning Indaba 2025</li>
+          <li><strong>Certificate of Excellence and Leadership</strong>, COLVET, FUNAAB</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">08 /Let's Connect</span>
+      </div>
+      <h2 class="section__title">Get In Touch</h2>
+      <p class="section__lede">Open to PhD/research opportunities, full-time ML roles, research collaborations, and speaking engagements.</p>
+
+      <a href="mailto:shilohadebisi@gmail.com" class="contact__email">shilohadebisi@gmail.com</a>
+
+      <ul class="contact__links">
+        <li><a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub →</a></li>
+        <li><a href="https://www.linkedin.com/in/adebisi-oni-2a6aa83b8" target="_blank" rel="noopener">LinkedIn →</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=tHkXRuoAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></li>
+        <li><a href="assets/ShilohOni_CV.pdf" target="_blank" rel="noopener">CV (PDF) →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <a href="#">Shiloh Oni</a> · Nigeria · 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

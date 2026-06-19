@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AfriVTON-Bench, a benchmark evaluating the robustness of virtual try-on models on African textile patterns and garment structures. Accepted for oral presentation at WiML @ ICML 2026." />
+  <title>AfriVTON-Bench, Case Study · Shiloh Oni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__brand">
+      <img src="../assets/shiloh-portrait.jpg" alt="" class="nav__avatar" />
+      <span class="nav__name">Shiloh Oni</span>
+    </a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__list" id="navList">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+      <li><a href="../index.html#research">Research</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../now.html">Now</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="../assets/ShilohOni_CV.pdf" class="nav__cv" target="_blank" rel="noopener">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ CASE STUDY HEADER ============ -->
+  <article class="case">
+    <div class="container container--narrow">
+
+      <a href="../index.html#projects" class="case__back">← Back to Projects</a>
+
+      <div class="case__meta">
+        <span class="case__badge">Accepted · Oral · WiML Workshop @ ICML 2026</span>
+        <span>Seoul, South Korea</span>
+      </div>
+
+      <h1 class="case__title">AfriVTON-Bench</h1>
+      <p class="case__subtitle">Evaluating the Robustness of Virtual Try-On Models to African Textile Patterns and Garment Structures</p>
+
+      <div class="case__authors">
+        Adekoya, T. O. &amp; <strong>Oni, S. A.</strong> · 2026
+      </div>
+
+      <div class="case__tags tags">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Generative Models</span>
+        <span class="tag">Cultural Bias</span>
+        <span class="tag">Benchmarking</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">HF Diffusers</span>
+      </div>
+
+      <!-- ============ ABSTRACT ============ -->
+      <section class="case__section">
+        <h2>Abstract</h2>
+        <p>
+          State-of-the-art virtual try-on (VTON) systems are trained almost entirely on Western fashion corpora, VITON-HD, DressCode, DeepFashion, leaving an open question about how these systems behave when handed garments outside that distribution. AfriVTON-Bench is the first benchmark constructed specifically to surface those failure modes: 111 African garment images across 16 categories and 7 countries, paired with 15 diverse person model images, yielding 1,012 person–garment evaluation pairs. We evaluated FASHN-VTON and LEFFA across the benchmark and identified three systematic failure modes, pattern dissolution, drape collapse, and tonal drift, that converge across architectures, pointing to the shared training distribution as root cause rather than any specific model design.
+        </p>
+      </section>
+
+      <!-- ============ MOTIVATION ============ -->
+      <section class="case__section">
+        <h2>Motivation</h2>
+        <p>
+          Virtual try-on is moving rapidly toward consumer deployment. The garments these systems handle well, denim, plain knits, Western dress silhouettes, are the garments they were trained on. African fashion presents a different test case: high-frequency wax-print patterns, intricate embroidery, non-Western draping (Aso-Ebi, Aso-Oke, Boubou, Kente), and a skin-tone distribution underrepresented in person-image datasets.
+        </p>
+        <p>
+          The question we set out to answer: when these systems meet that distribution, <em>how</em> do they fail? Not whether, failure was the working assumption, but with what structure. A surface-level "lower FID" tells the model-builder nothing actionable. The structural failure modes are what should drive the next round of dataset curation and model design.
+        </p>
+      </section>
+
+      <!-- ============ METHODOLOGY ============ -->
+      <section class="case__section">
+        <h2>Methodology</h2>
+
+        <h3>Benchmark construction</h3>
+        <p>
+          We curated 111 African garment images across 16 categories and 7 countries, deliberately spanning 5 sub-regions to avoid over-indexing on any single regional style. The garments were paired with 15 diverse person model images selected to span skin-tone range, body type, and pose. The full benchmark yields 1,012 person–garment pairs. A 50-image VITON-HD Western control set was retained as a comparison baseline.
+        </p>
+
+        <h3>Audit of source distributions</h3>
+        <p>
+          Before evaluation, we audited VITON-HD and DressCode, the two corpora that dominate VTON pre-training, for African textile and skin-tone representation. The gap motivated both the benchmark and its evaluation protocol: we couldn't justify reporting "improvements" measured against a metric calibrated entirely on the source distribution.
+        </p>
+
+        <h3>Models &amp; metrics</h3>
+        <p>
+          We evaluated FASHN-VTON and LEFFA across the benchmark using gLPIPS, pLPIPS, gSSIM, and DISTS. We also proposed <em>tonal drift</em> as a new perceptual metric: a measurement of skin-tone shift between input person image and synthesized output. Tonal drift was absent from standard VTON evaluation suites but turned out to be one of the most consistent failure signals.
+        </p>
+      </section>
+
+      <!-- ============ FINDINGS ============ -->
+      <section class="case__section">
+        <h2>Findings</h2>
+
+        <h3>Three systematic failure modes</h3>
+        <p>
+          Across both architectures and across the African garment subset, three failure modes emerged consistently:
+        </p>
+        <ul class="case__list">
+          <li><strong>Pattern dissolution</strong>, high-frequency wax-print motifs were smoothed or blurred during synthesis, with structural fidelity dropping sharply as motif frequency increased.</li>
+          <li><strong>Drape collapse</strong>, non-Western silhouettes (loose Boubou drape, wrapped Iro) were forced into Western-cut approximations, losing the garment's structural identity.</li>
+          <li><strong>Tonal drift</strong>, skin tone shifted measurably between input and synthesized output, with the shift concentrated on darker skin tones in the person-image set.</li>
+        </ul>
+
+        <h3>Cross-model convergence</h3>
+        <p>
+          FASHN-VTON and LEFFA, two architecturally distinct systems, converged on near-identical failure patterns. This convergence is the central finding: it points to the shared training distribution, not model design, as the root cause. Better architectures over the same data will keep producing the same failures.
+        </p>
+      </section>
+
+      <!-- ============ IMPACT ============ -->
+      <section class="case__section">
+        <h2>Why It Matters</h2>
+        <p>
+          The benchmark and its findings reframe a debate about VTON deployment: the cultural-robustness gap isn't a bug to patch in post-training, it's a property of the training distribution that propagates through any model trained on it. The path forward isn't a marginally better loss function, it's expanding the data substrate. AfriVTON-Bench is intended as both a measurement instrument and a forcing function for that conversation.
+        </p>
+        <p>
+          The paper was accepted for oral presentation at the Women in Machine Learning Workshop at ICML 2026 in Seoul. We're also presenting at the African Computer Vision Summer School 2026 in Accra.
+        </p>
+      </section>
+
+      <!-- ============ LINKS ============ -->
+      <section class="case__section">
+        <h2>Links &amp; Resources</h2>
+        <ul class="case__links">
+          <li><a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub repository →</a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&user=tHkXRuoAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></li>
+          <li><a href="../index.html#contact">Contact for collaboration →</a></li>
+        </ul>
+      </section>
+
+      <!-- ============ NEXT ============ -->
+      <nav class="case__nav" aria-label="Case study navigation">
+        <a href="../index.html#projects" class="case__nav-link">← All Projects</a>
+        <a href="bge-m3.html" class="case__nav-link">BGE-M3 →</a>
+      </nav>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <a href="../index.html">Shiloh Oni</a> · Nigeria · 2026</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
