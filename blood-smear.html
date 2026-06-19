@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learning From Less — Few-Shot Learning for Multi-Disease Blood Smear Diagnosis. Best Poster at Deep Learning Indaba 2025." />
+  <title>Few-Shot Blood Smear Diagnosis — Case Study · Shiloh Oni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav__brand">
+      <img src="../assets/shiloh-portrait.jpg" alt="" class="nav__avatar" />
+      <span class="nav__name">Shiloh Oni</span>
+    </a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__list" id="navList">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+      <li><a href="../index.html#research">Research</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../now.html">Now</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="../assets/ShilohOni_CV.pdf" class="nav__cv" target="_blank" rel="noopener">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <article class="case">
+    <div class="container container--narrow">
+
+      <a href="../index.html#projects" class="case__back">← Back to Projects</a>
+
+      <div class="case__meta">
+        <span class="case__badge">Best Poster Award · DLI 2025</span>
+        <span>Kigali, Rwanda</span>
+      </div>
+
+      <h1 class="case__title">Few-Shot Multi-Disease Blood Smear Diagnosis</h1>
+      <p class="case__subtitle">Learning From Less — diagnostic classification under severe label scarcity</p>
+
+      <div class="case__authors">
+        <strong>Oni, S.</strong> · ML Collective · 2024–2025
+      </div>
+
+      <div class="case__tags tags">
+        <span class="tag">Few-Shot Learning</span>
+        <span class="tag">Medical Imaging</span>
+        <span class="tag">Clinical AI</span>
+        <span class="tag">PyTorch</span>
+      </div>
+
+      <section class="case__section">
+        <h2>Abstract</h2>
+        <p>
+          Clinical machine learning in low-resource settings runs into a structural problem before it runs into any technical one: labelled medical imagery is scarce, and the diseases that most need it are often the ones with the least curated data. We built a few-shot classifier that diagnoses sickle cell anemia, malaria, leukemia, and trypanosomiasis from blood smear images, trained under deliberately constrained label budgets. The model was deployed for real-time inference on unseen samples with class-level prediction output. Awarded Best Poster at Deep Learning Indaba 2025.
+        </p>
+      </section>
+
+      <section class="case__section">
+        <h2>Motivation</h2>
+        <p>
+          The four diseases targeted by this work — sickle cell anemia, malaria, leukemia, and trypanosomiasis — share two properties: they are diagnosable from blood smear microscopy, and they disproportionately affect populations where labelled training data is scarce. The standard ML response is to assemble a larger labelled dataset. The clinical response is to make do with what's available.
+        </p>
+        <p>
+          Few-shot learning sits between those two responses: rather than requiring thousands of labelled examples per class, it asks whether a model can generalize from tens. For a clinic in a low-resource setting, that's the difference between a useful tool and a research curiosity.
+        </p>
+      </section>
+
+      <section class="case__section">
+        <h2>Methodology</h2>
+
+        <h3>Data</h3>
+        <p>
+          We assembled a curated set of blood smear images spanning the four target conditions, deliberately keeping the per-class label count low to mirror the scarcity that motivated the work. Image quality was uneven by design — clinical microscopy doesn't produce uniform images, and a model trained only on pristine inputs would not survive deployment.
+        </p>
+
+        <h3>Architecture &amp; training</h3>
+        <p>
+          We used a few-shot learning approach with metric-based generalization, fine-tuned on the curated dataset under strict label budgets. The training objective optimized for class separability under low-shot conditions rather than headline accuracy on a large held-out set.
+        </p>
+
+        <h3>Real-time inference</h3>
+        <p>
+          The trained model was deployed for real-time inference on unseen blood smear samples, producing class-level predictions with confidence scores. The deployment loop was kept deliberately simple — a clinician should be able to use the output without reading the paper.
+        </p>
+      </section>
+
+      <section class="case__section">
+        <h2>Findings</h2>
+        <p>
+          The classifier produced usable per-class predictions across all four conditions under the constrained label budget. Performance on unseen samples held up well enough to justify real-time inference. The clearest failure mode was on edge cases where smear preparation quality dropped sharply — a failure mode that mirrors what a junior clinician would also struggle with, which makes it a reasonable handoff point for human review rather than a silent error.
+        </p>
+      </section>
+
+      <section class="case__section">
+        <h2>Why It Matters</h2>
+        <p>
+          Most clinical ML benchmarks report accuracy on large, well-curated test sets. Most clinics do not have large, well-curated training sets. The gap between those two facts is where deployment fails. This work was a small attempt at closing it — and the Best Poster recognition at DLI 2025 suggests the framing landed with the broader African ML community as well.
+        </p>
+        <p>
+          The ongoing question is how far few-shot methods can go before they hit a structural ceiling — and what hybrid approaches (few-shot + targeted active learning + clinician-in-the-loop) buy in real deployment.
+        </p>
+      </section>
+
+      <section class="case__section">
+        <h2>Links &amp; Resources</h2>
+        <ul class="case__links">
+          <li><a href="https://github.com/tamiloreafk" target="_blank" rel="noopener">GitHub repository →</a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&user=tHkXRuoAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></li>
+          <li><a href="../index.html#contact">Contact for collaboration →</a></li>
+        </ul>
+      </section>
+
+      <nav class="case__nav" aria-label="Case study navigation">
+        <a href="bge-m3.html" class="case__nav-link">← BGE-M3</a>
+        <a href="../index.html#projects" class="case__nav-link">All Projects →</a>
+      </nav>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <a href="../index.html">Shiloh Oni</a> · Nigeria · 2026</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
